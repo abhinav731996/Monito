@@ -33,6 +33,7 @@
     --secondary-800: #F1D092;
     --secondary-600: #FCEED5;
     --secondary-dark: #EEC77E;
+    --secondary-accent-color: #242B33;
 
     --nutral-100: #00171F;
     --nutral-80: #242B33;
@@ -40,7 +41,7 @@
     --nutral-40: #99A2A5;
     --nutral-20: #CCD1D2;
     --nutral-10: #EBEEEF;
-    --nutral-00: #FDFDFD;
+    --nutral-0: #FDFDFD;
 
 
 
@@ -184,13 +185,26 @@ h4, .h4{
     display: inline-block;
     line-height: 1;
     border: 1px solid (--btn-border-color, var(--primary-color));
-    background: --btn-bg, var(--primary-color);
+    background: var(--btn-bg), var(--primary-color);
+    color: var(--btn-color), var(--primary-accent-color);
+    padding: var(--btn-padding-block), var(--btn-padding-inline);
+    border-radius: var(--btn-border-radius), .25em;
 }
-
+.btn-outline-primary{
+    color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    background-color: transparent;
+}
+.btn-outline-primary:hover{
+    color: var(--primary-accent-color);
+    border-color: var(--primary-dark);
+    background-color: var(--primary-dark);
+}
 .btn-lg{
     --btn-font: var(--btn-font-size-lg);
-
-
+}
+.btn-sm{
+    --btn-font: var(--btn-font-size-sm);
 }
 
 
